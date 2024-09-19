@@ -47,14 +47,17 @@ To run the application locally, follow these steps:
 
 ## Technologies Used
 
-1. React: The core of this project is built with React, a powerful library for creating dynamic user interfaces.
+1. **React**: The core of this project is built with React, a powerful library for creating dynamic user interfaces.
 
-2. CSS: Custom styles have been implemented using CSS to ensure a clean and intuitive user experience.
+2. **CSS**: Custom styles have been implemented using CSS to ensure a clean and intuitive user experience.
 
-3. Public API: The project uses a public API to fetch real-time exchange rates for USD, EUR, and UAH.
+3. **Public API**: The project uses a public API to fetch real-time exchange rates for USD, EUR, and UAH.
 
-4. React Hooks: The application makes extensive use of React hooks such as useState and useEffect to manage state and side effects, including fetching the exchange rates from the API.
+4. **React Hooks**: The application makes extensive use of React hooks such as useState and useEffect to manage state and side effects, including fetching the exchange rates from the API.
 
-5. TypeScript: Implemented for static type checking, enhancing code quality and reducing errors during development.
+5. **TypeScript**: Implemented for static type checking, enhancing code quality and reducing errors during development.
+
+6. **Axios**:  
+   Axios is used for making HTTP requests to the currency exchange API. It simplifies the process of fetching data and provides better error handling compared to the native `fetch` method.
 
 ![preview](https://github.com/Inna-Mykytiuk/currency-converter/blob/main/public/preview.jpg)
