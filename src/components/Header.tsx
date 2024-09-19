@@ -1,4 +1,6 @@
 import { useRates } from '../hooks/useRates';
+import usdUah from '../assets/usd-flag.svg';
+import euUah from '../assets/eur-flag.svg';
 
 export default function Header() {
   const { rates, isLoading } = useRates();
@@ -9,10 +11,20 @@ export default function Header() {
     <header>
       <div className='container'>
         <div className='header-wrapper'>
-          <h2 className="">Current exchange rate:</h2>
+          <h2>Current exchange rate:</h2>
           <div className='header-rates'>
-            <p>1 UAH = {rates.USD?.toFixed(4)} USD</p>
-            <p>1 UAH =  {rates.EUR?.toFixed(4)} EUR</p>
+            <div className='rate'>
+              <img src={usdUah} alt="USD" width={30} height={30} />
+              <p>
+                USD/UAH:{(1 / rates.USD).toFixed(2)}
+              </p>
+            </div>
+            <div className='rate'>
+              <img src={euUah} alt="EUR" width={30} height={30} />
+              <p>
+                EUR/UAH:{(1 / rates.EUR).toFixed(2)}
+              </p>
+            </div>
           </div>
         </div>
       </div>

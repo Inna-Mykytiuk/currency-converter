@@ -39,60 +39,53 @@ export default function CurrencyConverter() {
   };
 
   const reverseCurrencies = () => {
-    // Swap currencies
     setFirstCurrency(secondCurrency);
     setSecondCurrency(firstCurrency);
 
-    // Adjust amounts
     handleAmountChange(firstAmount, secondCurrency, firstCurrency, rates, setFirstAmount, setSecondAmount);
     handleAmountChange(secondAmount, firstCurrency, secondCurrency, rates, setSecondAmount, setFirstAmount);
   };
 
   return (
-    <div className="container">
-      <div className='currency-wrapper'>
-        <div className='currency-converter'>
-          <h1 className='currensy-title'>Currency converter</h1>
-          <div className='currency-item'>
-            <CurrencyInput
-              id="amount1"
-              value={firstAmount}
-              onChange={handleFirstAmountChange}
-              placeholder="Enter amount"
-            />
-            <CurrencySelect
-              id="currency1"
-              value={firstCurrency}
-              onChange={handleCurrency1Change}
-              options={Object.keys(rates)}
-            />
-          </div>
-          <button
-            type='button'
-            title="Reverse currencies"
-            onClick={reverseCurrencies}
-            className="reverse-button"
-          >
-            <SiConvertio />
-          </button>
-          <div className='currency-item'>
-            <CurrencyInput
-              id="amount2"
-              value={secondAmount}
-              onChange={handleSecondAmountChange}
-              placeholder="Enter amount"
-            />
-            <CurrencySelect
-              id="currency2"
-              value={secondCurrency}
-              onChange={handleCurrency2Change}
-              options={Object.keys(rates)}
-            />
-          </div>
-
-
+    <div className='currency-wrapper'>
+      <div className='currency-converter'>
+        <h1 className='currensy-title'>Currency converter</h1>
+        <div className='currency-item'>
+          <CurrencyInput
+            id="amount1"
+            value={firstAmount}
+            onChange={handleFirstAmountChange}
+            placeholder="Enter amount"
+          />
+          <CurrencySelect
+            id="currency1"
+            value={firstCurrency}
+            onChange={handleCurrency1Change}
+            options={Object.keys(rates)}
+          />
         </div>
-
+        <button
+          type='button'
+          title="Reverse currencies"
+          onClick={reverseCurrencies}
+          className="reverse-button"
+        >
+          <SiConvertio />
+        </button>
+        <div className='currency-item'>
+          <CurrencyInput
+            id="amount2"
+            value={secondAmount}
+            onChange={handleSecondAmountChange}
+            placeholder="Enter amount"
+          />
+          <CurrencySelect
+            id="currency2"
+            value={secondCurrency}
+            onChange={handleCurrency2Change}
+            options={Object.keys(rates)}
+          />
+        </div>
       </div>
     </div>
   );

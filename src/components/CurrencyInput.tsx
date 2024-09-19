@@ -11,7 +11,7 @@ const CurrencyInput: React.FC<CurrencyInputProps> = ({ id, value, onChange, plac
   return (
     <input
       id={id}
-      type="text"
+      type="number"
       value={value}
       onChange={(e) => onChange(e.target.value)}
       className="border p-2 m-2"

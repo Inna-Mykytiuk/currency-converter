@@ -4,11 +4,10 @@
   --beige-secondary: #F1EFE9;
   --text-black: #000;
   --text-white: #FFF;
+  --border-color: #d1d5db;
+  --button-hover: #385f6e;
 
-
-  --gradient: radial-gradient(161.19% 64% at 93% 52.6%, #482C98 0%, rgba(45, 30, 136, 0.00) 100%), #06054A;
   --shadow: 0px 10px 24px -15px rgba(0, 0, 0, 0.5);
-
 
   --font-size-base: 16px;
   --font-base: "Roboto", sans-serif;
@@ -87,8 +86,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .container {
-  width: 320px;
-  padding: 0 10px;
+  width: 100%;
   margin: 0 auto;
 }
 

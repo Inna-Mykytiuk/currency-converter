@@ -4,9 +4,14 @@ header {
   width: 100%;
   padding: 20px 0;
   background-color: #d7e7dc;
-  -webkit-box-shadow: 0px 10px 24px -15px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 10px 24px -15px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 10px 24px -15px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: var(--shadow);
+  -moz-box-shadow: var(--shadow);
+  box-shadow: var(--shadow);
+}
+
+h2 {
+  font-size: 18px;
+  color: #385f6e;
 }
 
 .currensy-title {
@@ -19,9 +24,9 @@ header {
 .header-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 20px;
 }
 
 .header-rates {
@@ -29,9 +34,26 @@ header {
   gap: 20px;
 }
 
+.header-rates p {
+  font-size: 14px;
+  color: #385f6e;
+}
+
+.rate {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 @media (min-width: 768px) {
   .header-wrapper {
     flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .header-rates p {
+    font-size: 16px;
   }
 }
 
@@ -46,17 +68,35 @@ header {
 }
 
 .currency-converter {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 30px 40px;
-  background-color: #d7e7dc;
+  background-color: hsl(138.75deg 25% 87.45% / 81%);
   margin-top: 100px;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 10px 24px -15px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 10px 24px -15px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 10px 24px -15px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: var(--shadow);
+  -moz-box-shadow: var(--shadow);
+  box-shadow: var(--shadow);
+}
 
+.currency-converter::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(./assets/coins.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(-50%);
+  opacity: 0.5;
 }
 
 .currency-item {
@@ -69,20 +109,20 @@ header {
 input {
   width: 100%;
   border-radius: 5px;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--border-color);
   padding: 10px 20px;
   font-size: 16px;
-  box-shadow: 0px 10px 24px -15px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow);
 }
 
 select {
   font-size: 14px;
-  width: 60px;
+  width: 80px;
   border-radius: 5px;
-  border: 1px solid #d1d5db;
-  padding: 10px 0;
+  border: 1px solid var(--border-color);
+  padding: 10px 10px;
   cursor: pointer;
-  box-shadow: 0px 10px 24px -15px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow);
 }
 
 
@@ -107,5 +147,20 @@ select {
 }
 
 .reverse-button:hover svg {
-  color: #385f6e;
+  color: var(--button-hover);
+}
+
+@media (min-width: 480px) {
+  .currency-converter::before {
+
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (min-width: 768px) {
+  .currency-converter::before {
+    width: 500px;
+    height: 500px;
+  }
 }
