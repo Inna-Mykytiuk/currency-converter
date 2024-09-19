@@ -1,42 +1,111 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Header */
+
+header {
+  width: 100%;
+  padding: 20px 0;
+  background-color: #d7e7dc;
+  -webkit-box-shadow: 0px 10px 24px -15px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 10px 24px -15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 10px 24px -15px rgba(0, 0, 0, 0.5);
+}
+
+.currensy-title {
   text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+  gap: 40px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-rates {
+  display: flex;
+  gap: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (min-width: 768px) {
+  .header-wrapper {
+    flex-direction: row;
   }
 }
 
-.card {
-  padding: 2em;
+/*Currency converter*/
+
+.currency-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.read-the-docs {
-  color: #888;
+.currency-converter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 40px;
+  background-color: #d7e7dc;
+  margin-top: 100px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 10px 24px -15px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 10px 24px -15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 10px 24px -15px rgba(0, 0, 0, 0.5);
+
+}
+
+.currency-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+input {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #d1d5db;
+  padding: 10px 20px;
+  font-size: 16px;
+  box-shadow: 0px 10px 24px -15px rgba(0, 0, 0, 0.5);
+}
+
+select {
+  font-size: 14px;
+  width: 60px;
+  border-radius: 5px;
+  border: 1px solid #d1d5db;
+  padding: 10px 0;
+  cursor: pointer;
+  box-shadow: 0px 10px 24px -15px rgba(0, 0, 0, 0.5);
+}
+
+
+.reverse-button {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding-right: 20px;
+  margin: 10px 0;
+
+}
+
+.reverse-button svg {
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease;
+}
+
+.reverse-button:hover svg {
+  color: #385f6e;
 }
