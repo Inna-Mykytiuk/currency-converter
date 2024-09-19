@@ -55,4 +55,6 @@ To run the application locally, follow these steps:
 
 4. React Hooks: The application makes extensive use of React hooks such as useState and useEffect to manage state and side effects, including fetching the exchange rates from the API.
 
+5. TypeScript: Implemented for static type checking, enhancing code quality and reducing errors during development.
+
 ![preview](https://github.com/Inna-Mykytiuk/currency-converter/blob/main/public/preview.jpg)
